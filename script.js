@@ -1,5 +1,12 @@
 document.getElementById('search-bar').addEventListener('input', function() {
     const query = this.value;
+    const clearButton = document.getElementById('clear-button');
+
+    if (query.length > 0) {
+        clearButton.style.display = 'inline';
+    } else {
+        clearButton.style.display = 'none';
+    }
 
     if (query.length > 1) { // Fetch suggestions for queries longer than 1 character
         fetch(`/suggestions?q=${query}`)
@@ -21,23 +28,10 @@ document.getElementById('suggestions-container').addEventListener('click', funct
     }
 });
 
-document.getElementById('search-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const query = document.getElementById('search-bar').value;
-
-    fetch('/search', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ query })
-    })
-    .then(response => response.json())
-    .then(results => {
-        const resultsContainer = document.getElementById('search-results');
-        resultsContainer.innerHTML = results.map(item => `<div>${item.title}: ${item.content}</div>`).join('');
-    })
-    .catch(error => console.error('Error fetching search results:', error));
+document.getElementById('clear-button').addEventListener('click', function() {
+    document.getElementById('search-bar').value = '';
+    document.getElementById('clear-button').style.display = 'none';
+    document.getElementById('suggestions-container').innerHTML = '';
 });
 
 document.getElementById('dark-mode-toggle').addEventListener('click', function() {

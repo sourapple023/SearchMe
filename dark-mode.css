@@ -15,18 +15,31 @@ body.dark-mode #dark-mode-toggle:hover {
 body.dark-mode #search-bar {
     background-color: #333333;
     color: #ffffff;
-    border: none; /* Removed border */
-    -webkit-appearance: none; /* Removes default appearance in WebKit browsers */
-    -moz-appearance: none; /* Removes default appearance in Mozilla browsers */
-    appearance: none; /* Removes default appearance */
-    outline: none; /* Ensure no outline */
-    box-shadow: none; /* Removes any box shadow */
-    background-clip: padding-box; /* Ensures no inner border lines */
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    box-shadow: none;
+    background-clip: padding-box;
+    border-radius: 25px; /* Fully rounded edges */
 }
 
 body.dark-mode #search-bar:focus {
     outline: none;
     box-shadow: 0 0 10px rgba(0, 193, 255, 0.5); /* Focus shadow */
+}
+
+body.dark-mode .clear-button {
+    color: #888;
+}
+
+body.dark-mode .clear-button:hover {
+    color: #ffffff;
+}
+
+body.dark-mode .progress-indicator {
+    color: #80CBC4;
 }
 
 body.dark-mode .logo-container {
@@ -35,6 +48,7 @@ body.dark-mode .logo-container {
 
 body.dark-mode .search-button {
     background-color: #80CBC4;
+    border-radius: 50%; /* Fully rounded corners */
 }
 
 body.dark-mode .search-button:hover {

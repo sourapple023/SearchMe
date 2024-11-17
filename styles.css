@@ -28,23 +28,31 @@ body {
     font-size: 2.5em; /* Soft and rounded look */
     color: #004d40; /* Dark Mint Green */
     margin-bottom: 20px;
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Pointer cursor */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.logo-container:hover {
+    color: #00796B; /* Darker Mint Green on hover */
+    text-decoration: none; /* Ensure no underline on hover */
 }
 
 .search-bar-container {
     display: flex;
     align-items: center;
     width: 100%;
-    max-width: 800px; /* Increased max-width for a longer search bar */
+    max-width: 2000px; /* Significantly increased max-width for a longer search bar */
     position: relative;
-    margin-top: 20px; /* Added spacing for better balance */
+    margin-top: 0; /* Removed top margin */
 }
 
 #search-bar {
     width: 100%;
-    padding: 15px 25px; /* Adjusted padding for a sleek look */
-    border: none; /* Removed border */
-    border-radius: 10px; /* Changed to more rectangular corners */
-    font-size: 1em; /* Slightly smaller font size for a compact look */
+    padding: 15px 25px;
+    border: none;
+    border-radius: 25px; /* Fully rounded edges */
+    font-size: 1em;
     background-color: #fff;
     color: #000;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -54,6 +62,7 @@ body {
     appearance: none; /* Removes default appearance */
     outline: none; /* Ensure no outline */
     background-clip: padding-box; /* Ensures no inner border lines */
+    padding-right: 50px; /* Space for the clear button */
 }
 
 #search-bar:focus {
@@ -65,14 +74,32 @@ body {
     color: #888;
 }
 
+/* Clear button inside search bar */
+.clear-button {
+    position: absolute;
+    right: 45px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.clear-button:hover {
+    color: #000;
+}
+
 .search-button {
     position: absolute;
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
-    padding: 10px 15px; /* Adjusted padding for consistency with search bar */
+    padding: 10px 15px;
     border: none;
-    border-radius: 10px; /* Changed to more rectangular corners */
+    border-radius: 50%; /* Fully rounded corners */
     background-color: #009688; /* Mint Green */
     color: white;
     font-size: 1em;
@@ -83,6 +110,17 @@ body {
 
 .search-button:hover {
     background-color: #00796B; /* Darker Mint Green */
+}
+
+/* Progress indicator */
+.progress-indicator {
+    display: none;
+    position: absolute;
+    right: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #009688;
 }
 
 #suggestions-container {
@@ -122,7 +160,7 @@ footer {
 #dark-mode-toggle {
     padding: 5px 10px;
     border: none;
-    border-radius: 10px; /* Changed to more rectangular corners */
+    border-radius: 50%; /* Fully rounded corners */
     background-color: #ffffff;
     color: #000000;
     cursor: pointer;

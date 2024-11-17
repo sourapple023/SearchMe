@@ -1,65 +1,133 @@
+/* Importing Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #008CFF; /* Updated background color */
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #00BFA5, #A7FFEB);
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+body.dark-mode {
+    background: linear-gradient(135deg, #121212, #333333);
+    color: #ffffff;
 }
 
 .container {
     text-align: center;
+    z-index: 1;
 }
 
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.logo-container {
+    font-size: 3em;
+    font-weight: 600;
+    color: #004d40; /* Dark Mint Green */
     margin-bottom: 20px;
 }
 
-.logo {
-    width: 150px;  /* Increase the size of the logo */
-    height: 150px; /* Increase the size of the logo */
-    margin-bottom: 20px;  /* Add some margin below the logo */
-    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5)); /* Add a shadow for a modern look */
+.logo-container .highlight {
+    font-style: italic;
+    font-weight: bold;
+    color: #00BFA5; /* Mint Green */
 }
 
-form {
+#dark-mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #000000;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 1.5em;
+}
+
+#dark-mode-toggle:hover {
+    background-color: #dddddd;
+}
+
+#search-form {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    gap: 20px;
 }
 
 #search-bar {
-    width: 300px;
-    padding: 10px;
-    border: 1px solid #0056b3; /* Darker border to match the theme */
-    border-radius: 5px;
-    margin-right: 10px;
-    font-size: 1em;
-    background-color: #000; /* Black background */
-    color: #fff; /* White text */
+    width: 100%;
+    max-width: 500px;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2em;
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#search-bar:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 193, 255, 0.5);
 }
 
 #search-bar::placeholder {
-    color: #dddddd; /* Light gray placeholder text */
+    color: #888;
 }
 
 button {
-    padding: 10px 20px;
+    padding: 15px 30px;
     border: none;
-    border-radius: 5px;
-    background-color: #0056b3; /* Slightly darker button background */
+    border-radius: 30px;
+    background-color: #009688; /* Updated button background */
     color: white;
-    font-size: 1em;
+    font-size: 1.2em;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
-    background-color: #003a75; /* Darker shade for hover effect */
+    background-color: #00796B; /* Darker shade for hover effect */
+    transform: scale(1.05);
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 0.8em;
+}
+
+body.dark-mode #dark-mode-toggle {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+body.dark-mode #search-bar {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+body.dark-mode button {
+    background-color: #ffffff;
+    color: #009688;
+}
+
+body.dark-mode button:hover {
+    background-color: #dddddd;
+    color: #009688;
 }

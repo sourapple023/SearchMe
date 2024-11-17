@@ -5,17 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SearchMe</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <header>
-            <img src="logo.png" alt="SearchMe Logo" class="logo">
-        </header>
+        <div class="logo-container">
+            Search<span class="highlight">Me</span>
+        </div>
         <form id="search-form">
             <input type="text" id="search-bar" placeholder="Search...">
             <button type="submit">Search</button>
         </form>
     </div>
+    <footer>
+        <p>&copy; 2024 SearchMe. All rights reserved.</p>
+    </footer>
+    <button id="dark-mode-toggle">🌙</button>
     <script src="script.js"></script>
 </body>
 </html>

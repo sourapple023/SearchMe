@@ -80,6 +80,10 @@ body {
     background-color: #00796B; /* Darker Mint Green */
 }
 
+#search-results {
+    margin-top: 20px;
+}
+
 footer {
     position: absolute;
     bottom: 10px;

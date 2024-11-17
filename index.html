@@ -14,14 +14,15 @@
         <div class="logo-container">
             searchme
         </div>
-        <form id="search-form">
+        <form id="search-form" method="post" action="/search">
             <div class="search-bar-container">
-                <input type="text" id="search-bar" placeholder="Search...">
+                <input type="text" id="search-bar" name="query" placeholder="Search...">
                 <button type="submit" class="search-button">
                     <i class="fas fa-search"></i>
                 </button>
             </div>
         </form>
+        <div id="search-results"></div>
     </div>
     <footer>
         <p>&copy; 2024 searchme. All rights reserved.</p>

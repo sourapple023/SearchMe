@@ -8,7 +8,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #00BFA5, #A7FFEB);
+    background: linear-gradient(135deg, #00BFA5, #A7FFEB); /* Mint Green gradient */
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -31,10 +31,11 @@ body {
     text-decoration: none; /* Remove underline */
     cursor: pointer; /* Pointer cursor */
     transition: color 0.3s ease; /* Smooth transition */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
 }
 
 .logo-container:hover {
-    color: #00796B; /* Darker Mint Green on hover */
+    color: #A7FFEB; /* Light Mint Green on hover */
     text-decoration: none; /* Ensure no underline on hover */
 }
 
@@ -62,7 +63,6 @@ body {
     appearance: none; /* Removes default appearance */
     outline: none; /* Ensure no outline */
     background-clip: padding-box; /* Ensures no inner border lines */
-    padding-right: 50px; /* Space for the clear button */
 }
 
 #search-bar:focus {
@@ -72,24 +72,6 @@ body {
 
 #search-bar::placeholder {
     color: #888;
-}
-
-/* Clear button inside search bar */
-.clear-button {
-    position: absolute;
-    right: 45px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    color: #888;
-    font-size: 1.2em;
-    cursor: pointer;
-    padding: 5px;
-}
-
-.clear-button:hover {
-    color: #000;
 }
 
 .search-button {
@@ -109,10 +91,9 @@ body {
 }
 
 .search-button:hover {
-    background-color: #00796B; /* Darker Mint Green */
+    background-color: #00796B; /* Darker Mint Green on hover */
 }
 
-/* Progress indicator */
 .progress-indicator {
     display: none;
     position: absolute;
@@ -155,21 +136,4 @@ footer {
     text-align: center;
     color: white;
     font-size: 0.8em;
-}
-
-#dark-mode-toggle {
-    padding: 5px 10px;
-    border: none;
-    border-radius: 50%; /* Fully rounded corners */
-    background-color: #ffffff;
-    color: #000000;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    font-size: 1.2em; /* Slightly smaller for a refined look */
-    margin-top: 10px; /* Added margin for better spacing */
-}
-
-#dark-mode-toggle:hover {
-    background-color: #dddddd;
 }

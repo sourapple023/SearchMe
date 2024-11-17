@@ -15,7 +15,12 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             body: JSON.stringify({ query })
         })
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
         .then(results => {
             resultsContainer.innerHTML = results.map(item => `<div>${item.title}: ${item.content}</div>`).join('');
 
@@ -30,16 +35,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     } else {
         resultsContainer.innerHTML = '<p>No query provided. Please go back and enter a search term.</p>';
-    }
-});
-
-// Dark mode toggle
-document.getElementById('dark-mode-toggle').addEventListener('click', function() {
-    document.body.classList.toggle('dark-mode');
-    let icon = document.getElementById('dark-mode-icon');
-    if (document.body.classList.contains('dark-mode')) {
-        icon.classList.replace('fa-sun', 'fa-moon');
-    } else {
-        icon.classList.replace('fa-moon', 'fa-sun');
     }
 });

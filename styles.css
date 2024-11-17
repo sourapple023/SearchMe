@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #007BFF, #00C1FF);
+    background-color: #008CFF; /* Updated background color */
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -14,9 +14,18 @@ body {
     text-align: center;
 }
 
-h1 {
-    font-size: 4em;
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 20px;
+}
+
+.logo {
+    width: 150px;  /* Increase the size of the logo */
+    height: 150px; /* Increase the size of the logo */
+    margin-bottom: 20px;  /* Add some margin below the logo */
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5)); /* Add a shadow for a modern look */
 }
 
 form {
@@ -28,17 +37,23 @@ form {
 #search-bar {
     width: 300px;
     padding: 10px;
-    border: none;
+    border: 1px solid #0056b3; /* Darker border to match the theme */
     border-radius: 5px;
     margin-right: 10px;
     font-size: 1em;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+}
+
+#search-bar::placeholder {
+    color: #dddddd; /* Light gray placeholder text */
 }
 
 button {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #0056b3;
+    background-color: #0056b3; /* Slightly darker button background */
     color: white;
     font-size: 1em;
     cursor: pointer;
@@ -46,5 +61,5 @@ button {
 }
 
 button:hover {
-    background-color: #003a75;
+    background-color: #003a75; /* Darker shade for hover effect */
 }

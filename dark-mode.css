@@ -18,6 +18,22 @@ body.dark-mode #search-bar:focus {
     border-color: #80CBC4; /* Lighter Mint Green for Dark Mode */
 }
 
+body.dark-mode .logo-part1 {
+    color: #80CBC4; /* Lighter Mint Green for Dark Mode */
+}
+
+body.dark-mode .logo-part2 {
+    color: #A7FFEB; /* Lighter Mint Green for Dark Mode */
+}
+
+body.dark-mode .search-button {
+    background-color: #80CBC4;
+}
+
+body.dark-mode .search-button:hover {
+    background-color: #4DB6AC;
+}
+
 body.dark-mode button {
     background-color: #ffffff;
     color: #009688;

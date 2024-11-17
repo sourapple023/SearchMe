@@ -1,5 +1,8 @@
 /* Importing Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Raleway:wght@800&display=swap');
+
+/* Include Font Awesome for search icon */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
 
 body {
     margin: 0;
@@ -21,16 +24,26 @@ body {
 }
 
 .logo-container {
-    font-size: 3em;
-    font-weight: 600;
-    color: #004d40; /* Dark Mint Green */
+    font-size: 2.5em; /* Slightly larger for prominence */
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.logo-container .highlight {
+.logo-part1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.5em;
+    color: #004d40; /* Dark Mint Green */
+}
+
+.logo-part2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5em;
     font-style: italic;
     font-weight: bold;
     color: #00BFA5; /* Mint Green */
+    margin-left: 8px; /* Adjusted separation for balance */
 }
 
 #dark-mode-toggle {
@@ -58,13 +71,14 @@ body {
     width: 100%;
     max-width: 500px;
     position: relative;
+    margin-top: 20px; /* Added spacing for better balance */
 }
 
 #search-bar {
     width: 100%;
     padding: 15px 20px; /* Center padding for balanced look */
     border: 2px solid #00BFA5;
-    border-radius: 30px;
+    border-radius: 30px 0 0 30px; /* Rounded left side */
     font-size: 1.2em;
     background-color: #fff;
     color: #000;
@@ -76,23 +90,26 @@ body {
     outline: none;
     border-color: #00796B; /* Darker Mint Green */
     box-shadow: 0 0 10px rgba(0, 193, 255, 0.5);
-    animation: pulse 1s infinite;
 }
 
 #search-bar::placeholder {
     color: #888;
 }
 
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 10px rgba(0, 193, 255, 0.5);
-    }
-    50% {
-        box-shadow: 0 0 20px rgba(0, 193, 255, 0.5);
-    }
-    100% {
-        box-shadow: 0 0 10px rgba(0, 193, 255, 0.5);
-    }
+.search-button {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 0 30px 30px 0; /* Rounded right side */
+    background-color: #009688; /* Mint Green */
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.search-button:hover {
+    background-color: #00796B; /* Darker Mint Green */
 }
 
 footer {

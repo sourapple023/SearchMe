@@ -41,10 +41,10 @@ body {
 
 #search-bar {
     width: 100%;
-    padding: 15px 20px; /* Center padding for balanced look */
+    padding: 10px 15px; /* Reduced padding for a sleeker look */
     border: none;
     border-radius: 30px; /* Fully rounded corners */
-    font-size: 1.2em; /* Slightly larger font size for modern look */
+    font-size: 1em; /* Slightly smaller font size for a compact look */
     background-color: #fff;
     color: #000;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -65,7 +65,7 @@ body {
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
-    padding: 10px 15px;
+    padding: 8px 12px; /* Reduced padding for a compact look */
     border: none;
     border-radius: 50%;
     background-color: #009688; /* Mint Green */

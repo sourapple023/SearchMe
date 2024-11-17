@@ -1,5 +1,5 @@
 /* Importing Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Raleway:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap');
 
 /* Include Font Awesome for search icon */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
@@ -24,45 +24,10 @@ body {
 }
 
 .logo-container {
-    font-size: 2.5em; /* Slightly larger for prominence */
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo-part1 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 2.5em;
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 2.5em; /* Soft and rounded look */
     color: #004d40; /* Dark Mint Green */
-}
-
-.logo-part2 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.5em;
-    font-style: italic;
-    font-weight: bold;
-    color: #00BFA5; /* Mint Green */
-    margin-left: 8px; /* Adjusted separation for balance */
-}
-
-#dark-mode-toggle {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 50%;
-    background-color: #ffffff;
-    color: #000000;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    font-size: 1.5em;
-}
-
-#dark-mode-toggle:hover {
-    background-color: #dddddd;
+    margin-bottom: 20px;
 }
 
 .search-bar-container {
@@ -77,9 +42,9 @@ body {
 #search-bar {
     width: 100%;
     padding: 15px 20px; /* Center padding for balanced look */
-    border: 2px solid #00BFA5;
-    border-radius: 30px 0 0 30px; /* Rounded left side */
-    font-size: 1.2em;
+    border: none;
+    border-radius: 30px; /* Fully rounded corners */
+    font-size: 1.2em; /* Slightly larger font size for modern look */
     background-color: #fff;
     color: #000;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -88,7 +53,6 @@ body {
 
 #search-bar:focus {
     outline: none;
-    border-color: #00796B; /* Darker Mint Green */
     box-shadow: 0 0 10px rgba(0, 193, 255, 0.5);
 }
 
@@ -97,12 +61,16 @@ body {
 }
 
 .search-button {
-    padding: 15px 20px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px 15px;
     border: none;
-    border-radius: 0 30px 30px 0; /* Rounded right side */
+    border-radius: 50%;
     background-color: #009688; /* Mint Green */
     color: white;
-    font-size: 1.2em;
+    font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s ease;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -119,4 +87,21 @@ footer {
     text-align: center;
     color: white;
     font-size: 0.8em;
+}
+
+#dark-mode-toggle {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #000000;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 1.2em; /* Slightly smaller for a refined look */
+    margin-top: 10px; /* Added margin for better spacing */
+}
+
+#dark-mode-toggle:hover {
+    background-color: #dddddd;
 }

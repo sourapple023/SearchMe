@@ -8,6 +8,10 @@ body.dark-mode #dark-mode-toggle {
     color: #ffffff;
 }
 
+body.dark-mode #dark-mode-toggle:hover {
+    background-color: #444444; /* Darker hover color for dark mode */
+}
+
 body.dark-mode #search-bar {
     background-color: #333333;
     color: #ffffff;
@@ -18,12 +22,8 @@ body.dark-mode #search-bar:focus {
     border-color: #80CBC4; /* Lighter Mint Green for Dark Mode */
 }
 
-body.dark-mode .logo-part1 {
-    color: #80CBC4; /* Lighter Mint Green for Dark Mode */
-}
-
-body.dark-mode .logo-part2 {
-    color: #A7FFEB; /* Lighter Mint Green for Dark Mode */
+body.dark-mode .logo-container {
+    color: #A7FFEB; /* Adjust logo color for dark mode */
 }
 
 body.dark-mode .search-button {
@@ -31,7 +31,11 @@ body.dark-mode .search-button {
 }
 
 body.dark-mode .search-button:hover {
-    background-color: #4DB6AC;
+    background-color: #4DB6AC; /* Darker hover color for dark mode */
+}
+
+body.dark-mode footer {
+    color: #ffffff;
 }
 
 body.dark-mode button {
@@ -42,4 +46,8 @@ body.dark-mode button {
 body.dark-mode button:hover {
     background-color: #dddddd;
     color: #009688;
+}
+
+body.dark-mode #dark-mode-icon {
+    content: "\f186"; /* Moon icon for dark mode (Font Awesome) */
 }

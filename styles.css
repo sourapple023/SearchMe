@@ -80,6 +80,27 @@ body {
     background-color: #00796B; /* Darker Mint Green */
 }
 
+#suggestions-container {
+    background-color: white;
+    color: black;
+    border: 1px solid #ddd;
+    border-radius: 0 0 10px 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    position: absolute;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestion:hover {
+    background-color: #f0f0f0;
+}
+
 #search-results {
     margin-top: 20px;
 }

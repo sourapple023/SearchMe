@@ -34,6 +34,15 @@ body.dark-mode .search-button:hover {
     background-color: #4DB6AC; /* Darker hover color for dark mode */
 }
 
+body.dark-mode #suggestions-container {
+    background-color: #333333;
+    color: white;
+}
+
+body.dark-mode .suggestion:hover {
+    background-color: #444444;
+}
+
 body.dark-mode footer {
     color: #ffffff;
 }

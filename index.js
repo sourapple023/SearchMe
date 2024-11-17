@@ -18,6 +18,14 @@ app.post('/search', (req, res) => {
     res.json(results);
 });
 
+app.get('/suggestions', (req, res) => {
+    const query = req.query.q.toLowerCase();
+    const suggestions = data
+        .filter(item => item.title.toLowerCase().includes(query) || item.content.toLowerCase().includes(query))
+        .map(item => item.title);
+    res.json(suggestions);
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });

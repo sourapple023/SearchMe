@@ -1,0 +1,29 @@
+body.dark-mode {
+    background: linear-gradient(135deg, #121212, #333333);
+    color: #ffffff;
+}
+
+body.dark-mode #dark-mode-toggle {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+body.dark-mode #search-bar {
+    background-color: #333333;
+    color: #ffffff;
+    border-color: #A7FFEB;
+}
+
+body.dark-mode #search-bar:focus {
+    border-color: #80CBC4; /* Lighter Mint Green for Dark Mode */
+}
+
+body.dark-mode button {
+    background-color: #ffffff;
+    color: #009688;
+}
+
+body.dark-mode button:hover {
+    background-color: #dddddd;
+    color: #009688;
+}

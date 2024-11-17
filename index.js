@@ -29,11 +29,14 @@ function calculateRelevance(item, query) {
 
 app.post('/search', (req, res) => {
     const query = req.body.query.toLowerCase();
+    console.log(`Received search query: ${query}`);
+
     const results = data
         .map(item => ({ ...item, score: calculateRelevance(item, query) })) // Calculate relevance score for each item
         .filter(item => item.score > 0) // Filter out items with zero score
         .sort((a, b) => b.score - a.score); // Sort by score in descending order
 
+    console.log(`Search results: ${JSON.stringify(results)}`);
     res.json(results);
 });
 

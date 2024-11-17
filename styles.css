@@ -34,15 +34,15 @@ body {
     display: flex;
     align-items: center;
     width: 100%;
-    max-width: 500px;
+    max-width: 600px; /* Increased max-width for a longer search bar */
     position: relative;
     margin-top: 20px; /* Added spacing for better balance */
 }
 
 #search-bar {
     width: 100%;
-    padding: 10px 15px; /* Reduced padding for a sleeker look */
-    border: 2px solid transparent; /* Ensures no visible border */
+    padding: 10px 20px; /* Adjusted padding for a sleeker look */
+    border: none; /* Removed border */
     border-radius: 30px; /* Fully rounded corners */
     font-size: 1em; /* Slightly smaller font size for a compact look */
     background-color: #fff;
@@ -53,7 +53,7 @@ body {
 
 #search-bar:focus {
     outline: none;
-    border-color: #00BFA5; /* Mint Green border on focus */
+    border: none;
     box-shadow: 0 0 10px rgba(0, 193, 255, 0.5);
 }
 

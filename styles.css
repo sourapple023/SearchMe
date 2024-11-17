@@ -42,7 +42,7 @@ body {
 #search-bar {
     width: 100%;
     padding: 10px 15px; /* Reduced padding for a sleeker look */
-    border: none;
+    border: 2px solid transparent; /* Ensures no visible border */
     border-radius: 30px; /* Fully rounded corners */
     font-size: 1em; /* Slightly smaller font size for a compact look */
     background-color: #fff;
@@ -53,6 +53,7 @@ body {
 
 #search-bar:focus {
     outline: none;
+    border-color: #00BFA5; /* Mint Green border on focus */
     box-shadow: 0 0 10px rgba(0, 193, 255, 0.5);
 }
 

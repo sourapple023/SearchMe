@@ -15,7 +15,7 @@ body.dark-mode #dark-mode-toggle:hover {
 body.dark-mode #search-bar {
     background-color: #333333;
     color: #ffffff;
-    border-color: #A7FFEB;
+    border-color: #A7FFEB; /* Mint Green border for dark mode */
 }
 
 body.dark-mode #search-bar:focus {

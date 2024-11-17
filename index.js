@@ -28,24 +28,38 @@ function calculateRelevance(item, query) {
 }
 
 app.post('/search', (req, res) => {
-    const query = req.body.query.toLowerCase();
-    console.log(`Received search query: ${query}`);
+    try {
+        const query = req.body.query.toLowerCase();
+        console.log(`Received search query: ${query}`);
 
-    const results = data
-        .map(item => ({ ...item, score: calculateRelevance(item, query) })) // Calculate relevance score for each item
-        .filter(item => item.score > 0) // Filter out items with zero score
-        .sort((a, b) => b.score - a.score); // Sort by score in descending order
+        const results = data
+            .map(item => ({ ...item, score: calculateRelevance(item, query) })) // Calculate relevance score for each item
+            .filter(item => item.score > 0) // Filter out items with zero score
+            .sort((a, b) => b.score - a.score); // Sort by score in descending order
 
-    console.log(`Search results: ${JSON.stringify(results)}`);
-    res.json(results);
+        console.log(`Search results: ${JSON.stringify(results)}`);
+        res.json(results);
+    } catch (error) {
+        console.error(`Error processing search query: ${error}`);
+        res.status(500).send('Internal Server Error');
+    }
 });
 
 app.get('/suggestions', (req, res) => {
-    const query = req.query.q.toLowerCase();
-    const suggestions = data
-        .filter(item => item.title.toLowerCase().includes(query) || item.content.toLowerCase().includes(query))
-        .map(item => item.title);
-    res.json(suggestions);
+    try {
+        const query = req.query.q.toLowerCase();
+        console.log(`Received suggestions query: ${query}`);
+
+        const suggestions = data
+            .filter(item => item.title.toLowerCase().includes(query) || item.content.toLowerCase().includes(query))
+            .map(item => item.title);
+
+        console.log(`Suggestions results: ${JSON.stringify(suggestions)}`);
+        res.json(suggestions);
+    } catch (error) {
+        console.error(`Error processing suggestions query: ${error}`);
+        res.status(500).send('Internal Server Error');
+    }
 });
 
 app.listen(PORT, () => {

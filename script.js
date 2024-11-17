@@ -8,7 +8,7 @@ document.getElementById('search-bar').addEventListener('input', function() {
                 const suggestionsContainer = document.getElementById('suggestions-container');
                 suggestionsContainer.innerHTML = suggestions.map(suggestion => `<div class="suggestion">${suggestion}</div>`).join('');
             })
-            .catch(error => console.error('Error:', error));
+            .catch(error => console.error('Error fetching suggestions:', error));
     } else {
         document.getElementById('suggestions-container').innerHTML = '';
     }
@@ -37,7 +37,7 @@ document.getElementById('search-form').addEventListener('submit', function(event
         const resultsContainer = document.getElementById('search-results');
         resultsContainer.innerHTML = results.map(item => `<div>${item.title}: ${item.content}</div>`).join('');
     })
-    .catch(error => console.error('Error:', error));
+    .catch(error => console.error('Error fetching search results:', error));
 });
 
 document.getElementById('dark-mode-toggle').addEventListener('click', function() {
